@@ -7,5 +7,5 @@ deploy:
   provider: packagecloud
   repository: jpa-notations
   username: kostat
-  key: $BINTRAY_API_KEY
+  token: "${PACKAGECLOUD_TOKEN}"
   skip_cleanup: true

@@ -4,6 +4,8 @@ jdk:
   - openjdk8
 
 deploy:
-  provider: script
-  script: "cp .travis.settings.xml $HOME/.m2/settings.xml && mvn deploy -Ptravis"
+  provider: packagecloud
+  repository: jpa-notations
+  username: kostat
+  token: $BINTRAY_API_KEY
   skip_cleanup: true

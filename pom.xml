@@ -101,11 +101,11 @@
 	       <distributionManagement>
 		        <snapshotRepository>
 		            <id>packagecloud-travis</id>
-		            <url>https://packagecloud.io/kostat/jpa-notations</url>
+		            <url>packagecloud+https://packagecloud.io/kostat/jpa-notations</url>
 		        </snapshotRepository>
 		        <repository>
 		            <id>packagecloud-travis</id>
-		            <url>https://packagecloud.io/kostat/jpa-notations</url>
+		            <url>packagecloud+https://packagecloud.io/kostat/jpa-notations</url>
 		        </repository>
 		    </distributionManagement>
 	    </profile>

@@ -7,7 +7,7 @@ import java.lang.annotation.Target;
 
 /**
  * Indicates that the class is a dynamic entity, e.g. temporary table or Sub Query result. This annotation is applied to
- * the entity class. To specify table name, use {@link javax.persistence.Table} annotation
+ * the entity class. To specify table name, use {@literal javax.persistence.Table} annotation
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.TYPE })

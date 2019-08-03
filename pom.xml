@@ -4,7 +4,7 @@
 	<name>Java Fluent JPA notation</name>
 	<groupId>co.streamx.fluent</groupId>
 	<artifactId>jpa-notations</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<url>https://github.com/streamx-co/FluentJPANotation</url>
 
@@ -38,7 +38,7 @@
         <connection>scm:git:git@github.com:streamx-co/FluentJPANotation.git</connection>
         <developerConnection>scm:git:git@github.com:streamx-co/FluentJPANotation.git</developerConnection>
         <url>scm:git:git@github.com:streamx-co/FluentJPANotation.git</url>
-        <tag>jpa-notations-1.0.3</tag>
+        <tag>HEAD</tag>
     </scm>
 
 	<dependencies>

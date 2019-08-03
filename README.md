@@ -1,1 +1,1 @@
-# FluentJPANotation
+# FluentJPANotation <div style="float:right">[![Maven Central](https://img.shields.io/maven-central/v/co.streamx.fluent/jpa-notations)](https://search.maven.org/search?q=g:%22co.streamx.fluent%22%20AND%20a:%22jpa-notations%22)</div>

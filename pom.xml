@@ -6,6 +6,7 @@
 	<artifactId>jpa-notations</artifactId>
 	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<url>https://github.com/streamx-co/FluentJPANotation</url>
 
 	<description>Fluent JPA notation</description>
 

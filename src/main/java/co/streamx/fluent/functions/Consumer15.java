@@ -19,4 +19,25 @@ public interface Consumer15<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T
                 T13 t13,
                 T14 t14,
                 T15 t15);
+
+    default Consumer15<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> andThen(Consumer15<T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15> other) {
+        return (t1,
+                t2,
+                t3,
+                t4,
+                t5,
+                t6,
+                t7,
+                t8,
+                t9,
+                t10,
+                t11,
+                t12,
+                t13,
+                t14,
+                t15) -> {
+            this.accept(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15);
+            other.accept(t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15);
+        };
+    }
 }

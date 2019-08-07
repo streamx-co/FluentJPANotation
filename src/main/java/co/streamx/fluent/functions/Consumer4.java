@@ -8,4 +8,14 @@ public interface Consumer4<T1, T2, T3, T4> extends Serializable {
                 T2 t2,
                 T3 t3,
                 T4 t4);
+
+    default Consumer4<T1, T2, T3, T4> andThen(Consumer4<T1, T2, T3, T4> other) {
+        return (t1,
+                t2,
+                t3,
+                t4) -> {
+            this.accept(t1, t2, t3, t4);
+            other.accept(t1, t2, t3, t4);
+        };
+    }
 }

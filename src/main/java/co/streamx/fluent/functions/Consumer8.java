@@ -12,4 +12,18 @@ public interface Consumer8<T1, T2, T3, T4, T5, T6, T7, T8> extends Serializable 
                 T6 t6,
                 T7 t7,
                 T8 t8);
+
+    default Consumer8<T1, T2, T3, T4, T5, T6, T7, T8> andThen(Consumer8<T1, T2, T3, T4, T5, T6, T7, T8> other) {
+        return (t1,
+                t2,
+                t3,
+                t4,
+                t5,
+                t6,
+                t7,
+                t8) -> {
+            this.accept(t1, t2, t3, t4, t5, t6, t7, t8);
+            other.accept(t1, t2, t3, t4, t5, t6, t7, t8);
+        };
+    }
 }

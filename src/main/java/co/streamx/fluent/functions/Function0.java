@@ -14,4 +14,17 @@ public interface Function0<T> extends Supplier<T>, Serializable {
         return () -> (Boolean) get() || other.get();
     }
 
+    /**
+     * TRUE predicate
+     */
+    static Function0<Boolean> TRUE() {
+        return (Function0<Boolean>) Predicates.TRUE0.instance;
+    }
+
+    /**
+     * FALSE predicate
+     */
+    static Function0<Boolean> FALSE() {
+        return (Function0<Boolean>) Predicates.FALSE0.instance;
+    }
 }

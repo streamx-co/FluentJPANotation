@@ -19,4 +19,20 @@ public interface Function3<T1, T2, T3, R> extends Serializable {
                 t2,
                 t3) -> (Boolean) apply(t1, t2, t3) || other.apply(t1, t2, t3);
     }
+
+    /**
+     * TRUE predicate
+     */
+    @SuppressWarnings("unchecked")
+    static <T1, T2, T3> Function3<T1, T2, T3, Boolean> TRUE() {
+        return (Function3<T1, T2, T3, Boolean>) Predicates.TRUE3.instance;
+    }
+
+    /**
+     * FALSE predicate
+     */
+    @SuppressWarnings("unchecked")
+    static <T1, T2, T3> Function3<T1, T2, T3, Boolean> FALSE() {
+        return (Function3<T1, T2, T3, Boolean>) Predicates.FALSE3.instance;
+    }
 }

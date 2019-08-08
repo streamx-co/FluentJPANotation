@@ -14,4 +14,19 @@ public interface Function1<T, R> extends Function<T, R>, Serializable {
         return (t) -> (Boolean) apply(t) || other.apply(t);
     }
 
+    /**
+     * TRUE predicate
+     */
+    @SuppressWarnings("unchecked")
+    static <T> Function1<T, Boolean> TRUE() {
+        return (Function1<T, Boolean>) Predicates.TRUE1.instance;
+    }
+
+    /**
+     * FALSE predicate
+     */
+    @SuppressWarnings("unchecked")
+    static <T> Function1<T, Boolean> FALSE() {
+        return (Function1<T, Boolean>) Predicates.FALSE1.instance;
+    }
 }

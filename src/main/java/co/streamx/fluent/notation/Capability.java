@@ -10,7 +10,20 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 @Getter
 public enum Capability {
-    ALIAS_INSERT(ParameterContext.FROM), ALIAS_UPDATE(ParameterContext.FROM), ALIAS_DELETE(ParameterContext.FROM),
+    /**
+     * Allow aliasing INSERTed table
+     */
+    ALIAS_INSERT(ParameterContext.FROM),
+
+    /**
+     * Allow aliasing UPDATEd table
+     */
+    ALIAS_UPDATE(ParameterContext.FROM),
+
+    /**
+     * Allow aliasing DELETEd table
+     */
+    ALIAS_DELETE(ParameterContext.FROM),
 
     /**
      * Use AS keyword when aliasing tables in FROM clause. See

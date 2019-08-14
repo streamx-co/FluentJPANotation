@@ -14,4 +14,13 @@ import java.lang.annotation.Target;
 @Notation
 public @interface Alias {
     boolean value() default true;
+
+    /**
+     * Indicates that in the context of the annotated function usage of aliases is allowed.
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target({ ElementType.METHOD, ElementType.PARAMETER })
+    @Notation
+    @interface Allowed {
+    }
 }

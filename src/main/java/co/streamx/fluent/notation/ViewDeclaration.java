@@ -7,13 +7,13 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-@Notation
-public @interface TableJoin {
-    boolean inverse() default false;
+public @interface ViewDeclaration {
 
+    /**
+     * Indicates that the method should apply view declaration on its argument
+     */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
-    @interface Property {
-        boolean inverse() default false;
+    @interface Apply {
     }
 }

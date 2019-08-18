@@ -14,9 +14,9 @@ import java.lang.annotation.Target;
 public @interface Function {
 
     /**
-     * standard SQL comment marker, so cannot be a real name
+     * standard SQL parameter marker, so cannot be a real name
      */
-    static String USE_METHOD_NAME = "--";
+    static String USE_METHOD_NAME = "?";
 
     String name() default USE_METHOD_NAME;
 

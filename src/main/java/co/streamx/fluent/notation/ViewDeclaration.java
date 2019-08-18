@@ -10,10 +10,18 @@ import java.lang.annotation.Target;
 public @interface ViewDeclaration {
 
     /**
-     * Indicates that the method should apply view declaration on its argument
+     * Indicates that the method should apply view declaration on its argument, or to the argument used to create it
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
-    @interface Apply {
+    @interface Select {
+    }
+
+    /**
+     * Indicates that the method return the view declaration
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    @interface Columns {
     }
 }

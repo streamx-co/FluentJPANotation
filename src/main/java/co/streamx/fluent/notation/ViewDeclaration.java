@@ -14,7 +14,7 @@ public @interface ViewDeclaration {
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
-    @interface Select {
+    @interface From {
     }
 
     /**
@@ -23,5 +23,13 @@ public @interface ViewDeclaration {
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     @interface Columns {
+    }
+
+    /**
+     * Indicates that the method return the view declaration
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    @interface Alias {
     }
 }

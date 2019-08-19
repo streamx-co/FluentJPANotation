@@ -10,15 +10,20 @@ import java.lang.annotation.Target;
 public @interface ViewDeclaration {
 
     /**
-     * Indicates that the method should apply view declaration on its argument, or to the argument used to create it
+     * Indicates that the method should apply view declaration on the arguments of the method, or to the argument used
+     * to create the view
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     @interface From {
+        /**
+         * Should alias the columns or not
+         */
+        boolean aliased() default false;
     }
 
     /**
-     * Indicates that the method return the view declaration
+     * Indicates that the method returns the view declaration
      */
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)

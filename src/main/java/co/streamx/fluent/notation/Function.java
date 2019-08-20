@@ -43,7 +43,5 @@ public @interface Function {
 
     boolean underscoresAsBlanks() default true;
 
-    boolean aliasesVisible() default false;
-
     boolean requiresAlias() default false;
 }

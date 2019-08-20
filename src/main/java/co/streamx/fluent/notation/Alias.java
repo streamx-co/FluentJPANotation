@@ -21,6 +21,6 @@ public @interface Alias {
     @Retention(RetentionPolicy.RUNTIME)
     @Target({ ElementType.METHOD, ElementType.PARAMETER })
     @Notation
-    @interface Allowed {
+    @interface Use {
     }
 }

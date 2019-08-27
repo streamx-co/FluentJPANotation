@@ -8,11 +8,10 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
 @Notation
-public @interface TableJoin {
-    boolean inverse() default false;
-
+public @interface TableCollection {
     @Retention(RetentionPolicy.RUNTIME)
     @Target(ElementType.METHOD)
     @interface Property {
+        boolean owner() default false;
     }
 }

@@ -4,6 +4,8 @@ import java.io.ObjectStreamException;
 
 interface Predicates {
 
+    static final Object[] emptyArray = {};
+
     class TRUE0 implements Function0<Boolean> {
 
         static final TRUE0 instance = new TRUE0();

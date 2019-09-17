@@ -14,6 +14,12 @@ public interface Function0<T> extends Supplier<T>, Serializable {
         return () -> (Boolean) get() || other.get();
     }
 
+    static <T> Function0<T[]> emptyArray() {
+        @SuppressWarnings("unchecked")
+        T[] empty = (T[]) Predicates.emptyArray;
+        return () -> empty;
+    }
+
     /**
      * TRUE predicate
      */

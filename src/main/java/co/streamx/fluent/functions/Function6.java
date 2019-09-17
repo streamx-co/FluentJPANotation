@@ -29,6 +29,17 @@ public interface Function6<T1, T2, T3, T4, T5, T6, R> extends Serializable {
                 t6) -> (Boolean) apply(t1, t2, t3, t4, t5, t6) || other.apply(t1, t2, t3, t4, t5, t6);
     }
 
+    static <T1, T2, T3, T4, T5, T6, R> Function6<T1, T2, T3, T4, T5, T6, R[]> emptyArray() {
+        @SuppressWarnings("unchecked")
+        R[] empty = (R[]) Predicates.emptyArray;
+        return (t1,
+                t2,
+                t3,
+                t4,
+                t5,
+                t6) -> empty;
+    }
+
     /**
      * TRUE predicate
      */

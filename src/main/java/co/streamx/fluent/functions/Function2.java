@@ -16,6 +16,13 @@ public interface Function2<T, U, R> extends BiFunction<T, U, R>, Serializable {
                 u) -> (Boolean) apply(t, u) || other.apply(t, u);
     }
 
+    static <T, U, R> Function2<T, U, R[]> emptyArray() {
+        @SuppressWarnings("unchecked")
+        R[] empty = (R[]) Predicates.emptyArray;
+        return (t,
+                u) -> empty;
+    }
+
     /**
      * TRUE predicate
      */

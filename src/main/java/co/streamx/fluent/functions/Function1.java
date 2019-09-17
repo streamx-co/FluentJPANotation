@@ -14,6 +14,12 @@ public interface Function1<T, R> extends Function<T, R>, Serializable {
         return (t) -> (Boolean) apply(t) || other.apply(t);
     }
 
+    static <T, R> Function1<T, R[]> emptyArray() {
+        @SuppressWarnings("unchecked")
+        R[] empty = (R[]) Predicates.emptyArray;
+        return t -> empty;
+    }
+
     /**
      * TRUE predicate
      */

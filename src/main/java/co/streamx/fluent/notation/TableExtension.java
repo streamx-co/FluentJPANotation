@@ -12,4 +12,5 @@ import java.lang.annotation.Target;
 @Target(ElementType.METHOD)
 @Notation
 public @interface TableExtension {
+    TableExtensionType value();
 }

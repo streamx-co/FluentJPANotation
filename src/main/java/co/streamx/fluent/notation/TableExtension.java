@@ -13,4 +13,14 @@ import java.lang.annotation.Target;
 @Notation
 public @interface TableExtension {
     TableExtensionType value();
+
+    /**
+     * Indicates that the annotated method generates a filter based on
+     * {@code @DiscriminatorColumn and @DiscriminatorValue}
+     */
+    @Retention(RetentionPolicy.RUNTIME)
+    @Target(ElementType.METHOD)
+    @Notation
+    @interface DiscriminatorFilter {
+    }
 }

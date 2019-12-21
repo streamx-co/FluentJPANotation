@@ -25,7 +25,7 @@ public @interface Function {
     /**
      * Useful in VarArgs cases
      */
-    boolean omitParenthesesIfArgumentess() default false;
+    boolean omitParenthesesIfArgumentless() default false;
 
     boolean omitArgumentsDelimiter() default false;
 
